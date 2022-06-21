@@ -42,7 +42,7 @@ cd SFC_Infrastructure_Visualization_App/Webapplication/frontend/frontendapp**
 npm install
 ng serve
 ```
-#### 8. go to localhost:4200/ to have a look at the application with example data
+#### 8. go to http://localhost:4200/ to have a look at the application with example data
 #### 9. use the REST API to add other data. You can use for example curl to send the data:
 ```bat
 curl -X POST localhost:8000/layer2/  -H "Content-Type: application/json" -d '{"Network":{
