@@ -2,7 +2,7 @@
 
 **Full-stack web application to visualize service function chaining infrastructure.**
 
-I designed and implemented a visualization system for SFC infrastructure. The project is supposed to become part of an application to simplify operating a P4-SFC network orchestrator without detailed knowledge about the underlying technical frameworks and processes. But the application can be used for other SFC infrastructure as well.
+This repository contains a web-based visualization system for SFC infrastructure built using Angular, Django, and SQLite. The project is supposed to become part of an application to simplify operating a P4-SFC network orchestrator without detailed knowledge about the underlying technical frameworks and processes. But the application can be used for other SFC infrastructure as well.
 
 **The application is part of my bachelor thesis published in this repository.**
 
