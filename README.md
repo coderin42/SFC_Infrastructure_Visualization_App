@@ -2,9 +2,11 @@
 
 **Full-stack web application to visualize service function chaining infrastructure.**
 
-***The full repository content was published to this repository: https://github.com/uni-tue-kn/sfc-visualization because a corresponding bachelor thesis is still in progress***
-
 I designed and implemented a visualization system for SFC infrastructure. The project is supposed to become part of an application to simplify operating a P4-SFC network orchestrator without detailed knowledge about the underlying technical frameworks and processes. But the application can be used for other SFC infrastructure as well.
+
+**The application is part of my bachelor thesis published in this repository.**
+
+https://github.com/coderin42/SFC_Infrastructure_Visualization_App/blob/e4f2b6eeceb6407c06669030f8e98352f8433b52/Abschlussarbeit.pdf
 
 **Application Architecture:**
 
