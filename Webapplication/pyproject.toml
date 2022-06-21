@@ -7,8 +7,8 @@ authors = ["charlotte <informatikistcool42@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 Django = "^3.2.9"
-djangorestframework = "^3.12.4"
-django-cors-headers = "^3.10.0"
+djangorestframework = "3.11.1"
+django-cors-headers = "3.4.0"
 
 [tool.poetry.dev-dependencies]
 
