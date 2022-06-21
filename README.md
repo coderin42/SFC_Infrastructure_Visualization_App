@@ -14,22 +14,43 @@ https://github.com/coderin42/SFC_Infrastructure_Visualization_App/blob/e4f2b6eec
 
 #### 1. install poetry (https://python-poetry.org)
 #### 2. make sure npm is installed (https://www.npmjs.com)
-#### 3. **git clone https://github.com/coderin42/SFC_Infrastructure_Visualization_App.git**
-#### 4. **cd SFC_Infrastructure_Visualization_App/Webapplication**
-#### 5. **poetry show** and add packages as stated in pyproject.toml (poetry add Django/poetry add django-cors-headers@3.4.0/ poetry add djangorestframework@3.11.1)
-#### 6. **cd SFC_Infrastructure_Visualization_App/Webapplication/backend**
-#### 7. **poetry run python manage.py runserver**
-#### 8. **cd SFC_Infrastructure_Visualization_App/Webapplication/frontend/frontendapp**
-#### 9. **npm install**
-#### 10. **ng serve**
-#### 11. go to localhost:4200/ to have a look at the application with example data
-#### 12. to add data, use the REST API. You can use for example curl to send the data:
+#### 3. clone repo:
+```bat
+git clone https://github.com/coderin42/SFC_Infrastructure_Visualization_App.git
+```
+#### 4. go to the Webapplication folder:
+```bat
+cd SFC_Infrastructure_Visualization_App/Webapplication
+```
+#### 5. activate the poetry virtualenvironment and add packages as stated in pyproject.toml: (poetry add Django/poetry add django-cors-headers@3.4.0/ poetry add djangorestframework@3.11.1)
 
+```bat
+poetry show
+poetry add Django
+poetry add django-cors-headers@3.4.0
+poetry add djangorestframework@3.11.1
+...
+```
+#### 6. start the django backend server 
+```bat
+cd SFC_Infrastructure_Visualization_App/Webapplication/backend
+poetry run python manage.py runserver
+```
+#### 7. go to the frontendapp, install the missing modules with npm and serve the application
+```bat
+cd SFC_Infrastructure_Visualization_App/Webapplication/frontend/frontendapp**
+npm install
+ng serve
+```
+#### 8. go to localhost:4200/ to have a look at the application with example data
+#### 9. use the REST API to add other data. You can use for example curl to send the data:
+```bat
 curl -X POST localhost:8000/layer2/  -H "Content-Type: application/json" -d '{"Network":{
     "nodes":[...],
     "links":[...]}}
+ ```
     
-The addresses for the visualization layers are the following: localhost:8000/layer2/ for the Layer2 representation, for the virtual network functions/service functions localhost:8000/vnfs/, and localhost:8000/sfcs/ for the service function chaining.
+The addresses for the visualization layers are the following: **localhost:8000/layer2/** for the Layer2 representation, for the virtual network functions/service functions representation **localhost:8000/vnfs/**, and **localhost:8000/sfcs/** for the service function chaining.
 
 More details about the API are available on the pages 30-33 of my bachelor thesis: https://github.com/coderin42/SFC_Infrastructure_Visualization_App/blob/e4f2b6eeceb6407c06669030f8e98352f8433b52/Abschlussarbeit.pdf
 
@@ -63,3 +84,8 @@ The overlay visualization part has a sidebar with links to all the known vnfs in
 !["SFC picture"](https://github.com/coderin42/SFC_Infrastructure_Visualization_App/blob/bb278fda7b7bd29d4686fca38d9b5693ffc4b95b/example%20pictures/Bildschirmfoto%20von%202022-03-11%2017-38-27.png)
 
 The SFC visualization includes a sidebar with selectable links to the different SFCs and a graph visualization of only the vnf_hosts. When a SFC is selected by clicking a link to a SFC, a SF path between SFs/vnfs specified from the SFC data is highlighted and shown by using directive arrows. Additional data about the SFC instantiation is shown below including a list of the vnfs in the correct order, their hosts in the correct order and the entire JSON-formatted data about the SFC instantiation. The JSON-formatted data is printed indented to ensure readability. Again a included tooltip is showing important information about the vnfs on mouseover. And a click on a vnf representation leads to the selected representation of the vnf on the overlay visualization view.
+
+**New Sequence Order Patch**
+
+Rectangles with numbers show the order in which the vnfs/service function instances are traversed in the visualized service function chain instantiation.
+
