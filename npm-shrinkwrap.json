@@ -1,9 +1,10 @@
 {
-  "name": "bsc-rupp-bwnet-visualization",
+  "name": "SFC_Infrastructure_Visualization_App",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
+      "name": "SFC_Infrastructure_Visualization_App",
       "dependencies": {
         "d3-jetpack": "^2.2.0",
         "d3-textwrap": "^3.0.0",
